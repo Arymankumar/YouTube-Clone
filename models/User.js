@@ -27,11 +27,12 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    suscribers:{
+    subscribers:{
         type:Number,
         default:0
     },
-    suscribedChannel:[{type:mongoose.Schema.Types.ObjectId,ref:'User'}]
+    subscribedBy:[{type:mongoose.Schema.Types.ObjectId,ref:'User'}],
+    subscribedChannels:[{type:mongoose.Schema.Types.ObjectId,ref:'User'}]
         
 
 },{timestamps:true})

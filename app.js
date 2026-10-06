@@ -4,6 +4,8 @@ const mongoose=require('mongoose')
 require('dotenv').config()
 const userRoute=require('../Backend/routes/user')
 const videoRoute=require('../Backend/routes/video')
+const commentRoute=require('../Backend/routes/comment')
+
 const bodyParser=require('body-parser')
 const fileUpload=require('express-fileupload')
 const jwt=require('jsonwebtoken')
@@ -32,8 +34,6 @@ const connectWithDatabase = async()=> {
     {
         console.log(err)
     }
-    
-
 }
 connectWithDatabase();
 app.use(bodyParser.json())
@@ -43,9 +43,9 @@ app.use(fileUpload({
 
 }));
 
-
 app.use('/user',userRoute)
 app.use('/video',videoRoute)
+app.use('/comment',commentRoute)
 
 
 
