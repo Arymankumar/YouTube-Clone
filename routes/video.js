@@ -4,7 +4,7 @@ const checkAuth = require('../middleware/checkAuth')
 const jwt = require('jsonwebtoken');
 const { resource } = require('./app');
 const cloudinary = require('cloudinary').v2
-const video = require('../models/video')
+const Video = require('../models/video')
 const mongoose = require('mongoose')
 
 cloudinary.config({
