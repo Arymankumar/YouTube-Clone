@@ -2,9 +2,9 @@ const express=require('express')
 const app=express();
 const mongoose=require('mongoose')
 require('dotenv').config()
-const userRoute=require('../Backend/routes/user')
-const videoRoute=require('../Backend/routes/video')
-const commentRoute=require('../Backend/routes/comment')
+const userRoute=require('./routes/user')
+const videoRoute=require('./routes/video')
+const commentRoute=require('./routes/comment')
 
 const bodyParser=require('body-parser')
 const fileUpload=require('express-fileupload')
