@@ -7,7 +7,7 @@ const User = require('../models/User')
 const mongoose = require('mongoose')
 const jwt = require('jsonwebtoken')
 const checkAuth = require('../middleware/checkAuth');
-const Video = require('./models/Video')
+const Video = require('../models/video')
 
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
