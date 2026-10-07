@@ -2,9 +2,9 @@ const express = require('express')
 const Router = express.Router();
 const checkAuth = require('../middleware/checkAuth')
 const jwt = require('jsonwebtoken');
-// const { resource } = require('./app');
+const { resource } = require('./app');
 const cloudinary = require('cloudinary').v2
-const video = require('../models/video')
+const Video = require('../models/Video')
 const mongoose = require('mongoose')
 
 cloudinary.config({
